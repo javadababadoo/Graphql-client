@@ -23,7 +23,7 @@ import { AppComponent } from './app.component';
 export class AppModule {
   constructor(apollo: Apollo, httpLink: HttpLink) {
     apollo.create({
-      link: httpLink.create({uri: ''}),
+      link: httpLink.create({uri: 'http://localhost:3000/graphql'}),
       cache: new InMemoryCache()
     });
   }
